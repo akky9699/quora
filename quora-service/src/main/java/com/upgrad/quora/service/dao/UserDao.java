@@ -72,4 +72,11 @@ public class UserDao {
         entityManager.merge(userAuthToken);
     }
 
+    public String deleteUser(String id){
+        UserEntity userEntity=getUserByUuid(id);
+        String uuid = userEntity.getUuid();
+        entityManager.remove(userEntity);
+        return uuid;
+    }
+
 }
