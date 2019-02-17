@@ -6,7 +6,6 @@ import com.upgrad.quora.service.business.CommonBussinessService;
 import com.upgrad.quora.service.business.QuestionBusinessService;
 import com.upgrad.quora.service.entity.AnswerEntity;
 import com.upgrad.quora.service.entity.QuestionEntity;
-import com.upgrad.quora.service.entity.UserAuthTokenEntity;
 import com.upgrad.quora.service.exception.AnswerNotFoundException;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import com.upgrad.quora.service.exception.InvalidQuestionException;

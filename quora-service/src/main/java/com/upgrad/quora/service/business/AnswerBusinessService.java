@@ -2,7 +2,6 @@ package com.upgrad.quora.service.business;
 
 import com.upgrad.quora.service.dao.AnswerDao;
 import com.upgrad.quora.service.entity.AnswerEntity;
-import com.upgrad.quora.service.entity.UserAuthTokenEntity;
 import com.upgrad.quora.service.exception.AnswerNotFoundException;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import com.upgrad.quora.service.exception.InvalidQuestionException;
