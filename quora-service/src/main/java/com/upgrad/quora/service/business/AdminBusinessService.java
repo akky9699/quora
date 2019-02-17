@@ -3,7 +3,6 @@ package com.upgrad.quora.service.business;
 import com.upgrad.quora.service.dao.UserDao;
 import com.upgrad.quora.service.entity.UserAuthTokenEntity;
 import com.upgrad.quora.service.entity.UserEntity;
-import com.upgrad.quora.service.exception.AdminAuthorFailedException;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import com.upgrad.quora.service.exception.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,7 @@ public class AdminBusinessService {
     @Transactional(propagation = Propagation.REQUIRED)
 
     //deleteUser required arguments (userid , accessToken) these functions check if the user exists or not based on the user_id and if it exist then the user is deleted
-    public String deleteUser(final String userid , final String accessToken) throws UserNotFoundException,AuthorizationFailedException,AdminAuthorFailedException  {
+    public String deleteUser(final String userid , final String accessToken) throws UserNotFoundException,AuthorizationFailedException  {
 
         UserEntity userEntity = userBussinessService.getUser(userid,accessToken);
         UserAuthTokenEntity userAuthTokenEntity = userDao.checkToken(accessToken);
@@ -35,7 +34,7 @@ public class AdminBusinessService {
         }
         else
         {
-            throw new AdminAuthorFailedException("ATHR-003","Unauthorized Access, Logged in user is not an admin");
+            throw new AuthorizationFailedException("ATHR-003","Unauthorized Access, Logged in user is not an admin");
         }
     }
 }

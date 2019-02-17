@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.upgrad.quora.api.controller.AdminControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.262 s <<< FAILURE! - in com.upgrad.quora.api.controller.AdminControllerTest
+deleteWithnonadminAsRole(com.upgrad.quora.api.controller.AdminControllerTest)  Time elapsed: 0.259 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is com.upgrad.quora.service.exception.AdminAuthorFailedException
+	at com.upgrad.quora.api.controller.AdminControllerTest.deleteWithnonadminAsRole(AdminControllerTest.java:37)
+Caused by: com.upgrad.quora.service.exception.AdminAuthorFailedException
+	at com.upgrad.quora.api.controller.AdminControllerTest.deleteWithnonadminAsRole(AdminControllerTest.java:37)
+
